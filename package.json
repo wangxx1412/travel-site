@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
+    "browser-sync": "^2.18.13",
     "gulp-postcss": "^7.0.0",
     "gulp-watch": "^4.3.11",
     "postcss-import": "^11.0.0",
