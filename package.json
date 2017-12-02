@@ -17,7 +17,16 @@
   },
   "homepage": "https://github.com/wangxx1412/travel-site#readme",
   "dependencies": {
+    "gulp": "^3.9.1",
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "gulp-postcss": "^7.0.0",
+    "gulp-watch": "^4.3.11",
+    "postcss-import": "^11.0.0",
+    "postcss-nested": "^2.1.2",
+    "postcss-simple-vars": "^4.1.0"
   }
 }
