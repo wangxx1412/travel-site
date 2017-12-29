@@ -20,6 +20,7 @@
     "babel-polyfill": "^6.26.0",
     "gulp": "^3.9.1",
     "jquery": "^3.2.1",
+    "jquery-smooth-scroll": "^2.2.0",
     "normalize.css": "^7.0.0",
     "waypoints": "^4.0.1"
   },
