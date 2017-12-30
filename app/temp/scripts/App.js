@@ -11272,6 +11272,7 @@ var StickyHeader = function () {
   function StickyHeader() {
     _classCallCheck(this, StickyHeader);
 
+    this.lazyImages = (0, _jquery2.default)(".lazyload");
     this.siteHeader = (0, _jquery2.default)(".site-header");
     this.triggerHeaderElement = (0, _jquery2.default)(".large-hero__title");
     this.createHeaderWaypoints();
@@ -11279,9 +11280,21 @@ var StickyHeader = function () {
     this.headerLinks = (0, _jquery2.default)(".primary-nav a");
     this.createPageSectionWaypoints();
     this.addSmoothScorlling();
+    this.refreshWaypoints();
   }
 
+  //Refresh waypoints to recalculate the distance pixels
+  //waypoint is attached to web browser global window scope, dont need to repeat in RevealOnScroll again.
+
+
   _createClass(StickyHeader, [{
+    key: "refreshWaypoints",
+    value: function refreshWaypoints() {
+      this.lazyImages.on('load', function () {
+        Waypoint.refreshAll();
+      });
+    }
+  }, {
     key: "addSmoothScorlling",
     value: function addSmoothScorlling() {
       this.headerLinks.smoothScroll();

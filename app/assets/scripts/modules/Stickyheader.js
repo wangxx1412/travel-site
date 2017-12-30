@@ -4,6 +4,7 @@ import smoothScroll from 'jquery-smooth-scroll';
 
 class StickyHeader {
   constructor() {
+    this.lazyImages = $(".lazyload");
     this.siteHeader = $(".site-header");
     this.triggerHeaderElement = $(".large-hero__title");
     this.createHeaderWaypoints();
@@ -11,6 +12,15 @@ class StickyHeader {
     this.headerLinks = $(".primary-nav a");
     this.createPageSectionWaypoints();
     this.addSmoothScorlling();
+    this.refreshWaypoints();
+  }
+
+//Refresh waypoints to recalculate the distance pixels
+//waypoint is attached to web browser global window scope, dont need to repeat in RevealOnScroll again.
+  refreshWaypoints(){
+    this.lazyImages.on('load',function(){
+      Waypoint.refreshAll();
+    })
   }
 
   addSmoothScorlling(){
