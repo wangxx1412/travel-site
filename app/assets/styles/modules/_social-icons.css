@@ -4,7 +4,7 @@
   &__icon{
     background-color: $mainGold;
     display: inline-block;
-    margin: 0 5px 5px 5px 5px;
+    margin: 0 5px 5px 5px;
     width: 33%;
     height: 72px;
     position: relative;
